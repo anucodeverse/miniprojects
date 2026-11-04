@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form Validation</title>
+  <link rel="stylesheet" type="text/css" href="fstyle.css">
+  <script>
+  function validateForm() {
+    const checkboxes = document.querySelectorAll('.check');
+    let errors = [];
+
+    // Message container (create one if not present)
+    let messageDiv = document.getElementById('formMessage');
+    if (!messageDiv) {
+      messageDiv = document.createElement('div');
+      messageDiv.id = 'formMessage';
+      document.body.appendChild(messageDiv);
+    }
+    messageDiv.innerHTML = '';
+    messageDiv.className = 'error';
+
+    // Index mapping
+    const occupationStart = 0;
+    const occupationEnd = 7;
+    const employmentStart = 8;
+    const employmentEnd = checkboxes.length - 1;
+
+    // Flags
+    let isOccupationSelected = false;
+    let isSalariedSelected = false;
+    let isEmploymentTypeSelected = false;
+
+    // Check Occupation (indexes 0–7)
+    for (let i = occupationStart; i <= occupationEnd; i++) {
+      if (checkboxes[i]?.checked) {
+        isOccupationSelected = true;
+        if (i === 0) isSalariedSelected = true;
+      }
+    }
+
+    // Check Employment Type (indexes 8–end)
+    for (let i = employmentStart; i <= employmentEnd; i++) {
+      if (checkboxes[i]?.checked) {
+        isEmploymentTypeSelected = true;
+      }
+    }
+
+    // Final validation
+    if (!isOccupationSelected && !isEmploymentTypeSelected) {
+      errors.push("Please fill the form");
+    } else {
+      if (!isOccupationSelected) {
+        errors.push("Please select an occupation");
+      }
+
+      if (isSalariedSelected && !isEmploymentTypeSelected) {
+        errors.push("Please select an employment type");
+      }
+
+      if (!isSalariedSelected && isEmploymentTypeSelected && !isOccupationSelected) {
+        errors.push("Please select 'Salaried' in occupation to choose employment type");
+      }
+    }
+
+    // Display errors or success
+    if (errors.length > 0) {
+      messageDiv.innerHTML = errors.map(e => `<div>• ${e}</div>`).join('');
+      messageDiv.className = 'error';
+    } else {
+      messageDiv.textContent = "Form submitted successfully";
+      messageDiv.className = 'success';
+    }
+
+    return false; // Prevent form submission
+  }
+
+  // Attach validation to submit via event (no form in your HTML, so listen for Enter or button click manually)
+  document.addEventListener('DOMContentLoaded', function () {
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        validateForm();
+      }
+    });
+  });
+</script>
+
+</head>
+<body bgcolor="EED6BA">   
+  <form onsubmit="return validateForm()">
+
+  <div class="top1"><b>(F)CUSTOMER PROFILE DETAILS#-1st APPLICANT</b></div>
+  
+  <div>
+    <div class="top2">Occupation</div>
+    <div class="top3"><input type="checkbox" class="check" class="occupation-check"></div>
+    <div class="top4">Salaried</div> 
+    <div class="top5"><input type="checkbox" class="check" class="occupation-check"></div>
+    <div class="top6">Self employed</div>
+    <div class="top7"><input type="checkbox" class="check" class="occupation-check"></div>
+    <div class="top8">Retired</div>
+    <div class="top9"><input type="checkbox" class="check" class="occupation-check"></div>
+    <div class="top10">Self employed prof</div>
+    <div class="top11"><input type="checkbox" class="check" class="occupation-check"></div>
+    <div class="top12">House wife</div>
+    <div class="top13"><input type="checkbox" class="check" class="occupation-check"></div>
+    <div class="top14">Politician</div>
+    <div class="top15"><input type="checkbox" class="check" class="occupation-check"></div>
+    <div class="top16">Student</div>
+    <div class="top17"><input type="checkbox" class="check" class="occupation-check"></div>
+    <div class="top18">Others----------------------</div> 
+    
+  </div>
+  <div id="errorOccupation" class="error"></div>
+
+  <div>
+    <div class="top19">if salaried employed with</div>
+    <div class="top20"><input type="checkbox" class="check" class="employment-type-check"></div>
+    <div class="top21">Private ltd</div> 
+    <div class="top22"><input type="checkbox" class="check" class="employment-type-check"></div>
+    <div class="top23">Partnership</div>
+    <div class="top24"><input type="checkbox" class="check" class="employment-type-check"></div>
+    <div class="top25">Proprietership</div>
+    <div class="top26"><input type="checkbox" class="check" class="employment-type-check" ></div>
+    <div class="top27">Public limited</div>
+    <div class="top28"><input type="checkbox" class="check" class="employment-type-check"></div>
+    <div class="top29">Public sector</div>
+    <div class="top30"><input type="checkbox" class="check" class="employment-type-check"></div>
+    <div class="top31">Government</div>
+    <div class="top32"><input type="checkbox" class="check" class="employment-type-check"></div>
+    <div class="top33">Multinational</div>
+    <div class="top34"><input type="checkbox" class="check" class="employment-type-check"></div>
+    <div class="top35">Others----------------------</div>
+    
+    
+    
+  </div>
+</form>
+  <button onclick="validateForm()">Submit</button>
+<div id="formMessage" class="error"></div>
+ </body>
+</html>

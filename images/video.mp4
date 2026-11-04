@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!-- saved from url=(0068)file:///C:/Users/ANU/Desktop/javascript/mini%20projects/webpage.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>webpage</title>
+	<link rel="stylesheet" type="text/css" href="./video_files/styel.css">
+</head>
+<body>
+	<div class="box">
+		<div class="font">
+		<font class="margin1" size="5px"><b>claimM4</b></font>
+		<font class="margin">HOME</font>
+		<font class="margin">
+		<select style=" background:none; color:white;border:none">
+			
+	
+			<option>TUTORIALS</option>
+			<option>html</option>
+			<option>css</option>
+		
+		</select>
+		</font>
+
+		<font class="margin">REVIEWS</font>
+		<font class="margin">NEWS</font>
+		<font class="margin">AROUND</font>
+		<font class="margin">DIY</font>
+		<button class="button">ASK A QUESTION</button></div>
+		
+	</div>
+	<div class="big"><!--big div-->
+		<div class="bgcolor"><!--background levendor-->
+			<div class="video">
+				<video width="320" height="240" controls="">
+  <source src="vid.mp4" type="video/mp4">
+  
+</video>
+
+			</div><!--image-->
+			<div class="text">
+				
+			</div><!--text-->
+		</div>
+		
+	</div>
+
+
+</body></html>

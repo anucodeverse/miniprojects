@@ -1,0 +1,1160 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Form Validation</title>
+  <link rel="stylesheet" type="text/css" href="fstyle.css">
+     <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    h4 {
+      margin-bottom: 5px;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .checkbox-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    .checkbox-row label {
+      min-width: 180px;
+    }
+    .text-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .text-row input[type="text"] {
+      width: 40px;
+      padding: 5px;
+      text-align: center;
+    }
+    .error {
+      color: red;
+      font-weight: bold;
+    }
+    .success {
+      color: green;
+      font-weight: bold;
+    }
+     .payment-section {
+      margin-top: 20px;
+      font-family: Arial, sans-serif;
+    }
+
+    .payment-section .section-title {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .payment-options {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .payment-option {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .payment-note {
+      margin-top: 10px;
+      color: red;
+      font-size: 14px;
+    }
+
+    .error {
+      color: red;
+      font-weight: bold;
+      margin-top: 5px;
+    }
+     body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f2f2f2;
+    }
+
+    .payment-table {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      border: 2px solid black;
+      background-color: ;
+      width: 100%;
+    }
+
+    .payment-table div {
+      border: 1px solid black;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .header {
+      font-weight: bold;
+      background-color: ;
+    }
+
+    .input-row {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+
+    .input-box {
+      width: 10px;     /* Reduced width */
+      height: 15px;    /* Reduced height */
+      text-align: center;
+      font-size: 14px;
+    }
+    .account-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: ;
+    padding: 10px;
+    flex-wrap: wrap;
+  }
+
+  .account-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+  }
+
+  .account-block b {
+    margin-bottom: 5px;
+  }
+
+  .input-boxes {
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+  }
+
+  .input-boxes input {
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    border: 1px solid #999;
+    border-radius: 3px;
+  }
+
+  .note {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+   body {
+      font-family: serif;
+      background-color: #f1d9bd;
+      margin: 20px;
+    }
+
+    .container {
+      display: flex;
+      border: 2px solid black;
+      padding: 20px;
+    }
+
+    .left, .right {
+      width: 50%;
+      padding: 10px;
+    }
+
+    h2, h3 {
+      margin: 0;
+    }
+
+    .checkbox-label {
+      font-size: 20px;
+    }
+
+    .note {
+      color: red;
+      font-size: 16px;
+      margin-top: 5px;
+    }
+
+    .card-input-row {
+      margin-top: 10px;
+    }
+
+    .card-input-row label {
+      display: inline-block;
+      width: 100px;
+    }
+
+    .card-input-row input[type="text"] {
+      width: 20px;
+      height: 25px;
+      text-align: center;
+      margin-right: 3px;
+    }
+
+    /* Modified new card box layout */
+    .new-card-box {
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+      border: 2px solid black;
+      width: fit-content;
+      margin-top: 10px;
+    }
+
+    .new-card-box > div {
+      border-left: 2px solid black;
+    }
+
+    .new-card-box > div:first-child {
+      border-left: none;
+    }
+
+    .atm-card, .debit-card {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .atm-card-header, .debit-card-header {
+      text-align: center;
+      padding: 5px;
+      border-bottom: 2px solid black;
+      font-weight: bold;
+    }
+
+    .atm-card-options {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 10px;
+      gap: 15px;
+    }
+
+    .atm-card-options label {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .debit-card-options {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      padding: 10px;
+    }
+
+    .debit-card-options label {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .right-notes {
+      margin-top: 10px;
+      font-size: 15px;
+      margin-left: 400px;
+    }
+
+    .red-text {
+      color: red;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .code-boxes input[type="text"] {
+      width: 15px;
+      height: 20px;
+      margin-right: 3px;
+    }
+    .back1{
+      color: white;
+      font-size: 20px;
+      background-color: blue;
+    }
+    .b1{
+      margin-left: 30px;
+    }
+    .check{
+      width: 40px;
+      height: 20px;
+      margin-left: -5px;
+      margin-top: 15px;
+    }
+
+
+
+</style>
+<script>
+  function validateForm() {
+    const errorFields = [
+      "errorOccupation", "errorEmployment", "errorDuration", "errorBusiness",
+      "errorCompanyType", "errorProfessional", "errorDateTurnover",
+      "errorIncome", "errorPEP", "errorPEP1", "errorPayment",
+      "errorRow1", "errorRow2", "errorRow3", "errorAccountSection", "fdCheckboxError"
+    ];
+
+    errorFields.forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.textContent = "";
+    });
+
+    document.getElementById("formError").textContent = "";
+    document.getElementById("successMsg").textContent = "";
+
+    let errorCount = 0;
+
+    const isGroupChecked = (id) => {
+      const inputs = document.querySelectorAll(`#${id} input[type='checkbox']`);
+      return [...inputs].some(input => input.checked);
+    };
+
+    const isTextGroupFilled = (id) => {
+      const inputs = document.querySelectorAll(`#${id} input[type='text']`);
+      return [...inputs].every(input => input.value.trim() !== "");
+    };
+
+    const isValidDate = () => {
+      const rows = document.querySelectorAll("#dateTurnoverGroup .text-row");
+      const inputs = rows[0]?.querySelectorAll("input");
+      if (!inputs || inputs.length < 8) return false;
+      const day = inputs[0].value + inputs[1].value;
+      const month = inputs[2].value + inputs[3].value;
+      const year = inputs[4].value + inputs[5].value + inputs[6].value + inputs[7].value;
+      const dateString = `${year}-${month}-${day}`;
+      const dateObj = new Date(dateString);
+      return (
+        dateObj &&
+        dateObj.getFullYear() == parseInt(year) &&
+        dateObj.getMonth() + 1 == parseInt(month) &&
+        dateObj.getDate() == parseInt(day)
+      );
+    };
+
+    const isCardFilledFromNode = (node) => {
+      if (!node) return false;
+      const inputs = node.querySelectorAll("input[type='text']");
+      return [...inputs].every(input => input.value.trim() !== "");
+    };
+
+    const occupationChecked = isGroupChecked("occupationGroup");
+    const employmentChecked = isGroupChecked("employmentGroup");
+    const durationChecked = isGroupChecked("durationGroup");
+    const businessChecked = isGroupChecked("businessGroup");
+    const companyChecked = isGroupChecked("companyGroup");
+    const professionalChecked = isGroupChecked("professionalGroup");
+    const incomeChecked = isGroupChecked("incomeGroup");
+    const textInputsFilled = isTextGroupFilled("dateTurnoverGroup");
+    const dateIsValid = isValidDate();
+
+    const pep1 = document.querySelectorAll("input[name='pep1']");
+    const pep2 = document.querySelectorAll("input[name='pep2']");
+    const pep1Yes = pep1[0]?.checked;
+    const pep1No = pep1[1]?.checked;
+    const pep2Yes = pep2[0]?.checked;
+    const pep2No = pep2[1]?.checked;
+
+    const paymentOptions = document.querySelectorAll("input[name='payment']");
+    let selectedPaymentCount = 0;
+    paymentOptions.forEach(opt => {
+      if (opt.checked) selectedPaymentCount++;
+    });
+
+    const cardErrorBox = document.getElementById("cardError");
+    if (cardErrorBox) cardErrorBox.textContent = "";
+
+    const accountInputs = document.querySelectorAll(".account-block .input-boxes input");
+    const accountErrorBox = document.getElementById("errorAccountSection");
+    const accountFilled = [...accountInputs].every(input => input.value.trim() !== "");
+
+    const cardRows = document.querySelectorAll(".card-input-row");
+    const card1Filled = isCardFilledFromNode(cardRows[0]);
+    const card2Filled = isCardFilledFromNode(cardRows[1]);
+
+    const newCardChecked = document.querySelector(".right h2 input[type='checkbox']")?.checked;
+    const atm1 = document.querySelector(".atm-card-options label:nth-of-type(1) input")?.checked;
+    const atm2 = document.querySelector(".atm-card-options label:nth-of-type(2) input")?.checked;
+    const debitSelected = [...document.querySelectorAll(".debit-card-options input[type='checkbox']")].some(input => input.checked);
+
+    const isFDSectionValid = () => {
+      const fdCheckboxes = [
+        ...document.querySelectorAll('.b2 input[type="checkbox"], .b4 input[type="checkbox"], .b6 input[type="checkbox"], .b8 input[type="checkbox"], .b10 input[type="checkbox"], .b12 input[type="checkbox"]'),
+        ...document.querySelectorAll('.r1 input[type="checkbox"], .r2 input[type="checkbox"], .r3 input[type="checkbox"], .r4 input[type="checkbox"], .r5 input[type="checkbox"], .r6 input[type="checkbox"], .r7 input[type="checkbox"], .r8 input[type="checkbox"], .r9 input[type="checkbox"], .r10 input[type="checkbox"], .r11 input[type="checkbox"]')
+      ];
+      return fdCheckboxes.some(checkbox => checkbox.checked);
+    };
+
+    const isFDAdditionalSectionValid = () => {
+      const debitCheckboxes = document.querySelectorAll(".ck19, .ck20, .ck21");
+      const generalChecks = document.querySelectorAll(".p2 input[type='checkbox'], .p4 input[type='checkbox'], .p5 input[type='checkbox'], .v1 input[type='checkbox'], .v3 input[type='checkbox'], .v5 input[type='checkbox'], .v7 input[type='checkbox'], .w2 input[type='checkbox'], .w4 input[type='checkbox'], .w6 input[type='checkbox'], .w8 input[type='checkbox'], .w10 input[type='checkbox']");
+      let isDebitChecked = Array.from(debitCheckboxes).some(chk => chk.checked);
+      let isGeneralChecked = Array.from(generalChecks).some(chk => chk.checked);
+      return isDebitChecked && isGeneralChecked;
+    };
+
+    const fdErrorElement = document.getElementById('fdSectionError');
+    const additionalErrorElement = document.getElementById('fdAdditionalSectionError');
+    if (fdErrorElement) fdErrorElement.innerText = "";
+    if (additionalErrorElement) additionalErrorElement.innerText = "";
+
+    if (
+      !occupationChecked && !employmentChecked && !durationChecked && !businessChecked &&
+      !companyChecked && !professionalChecked && !incomeChecked && !textInputsFilled &&
+      !(pep1Yes || pep1No) && !(pep2Yes || pep2No) && selectedPaymentCount === 0
+    ) {
+      document.getElementById("formError").textContent = "❌ Please fill the form.";
+      return false;
+    }
+
+    if (!occupationChecked) {
+      document.getElementById("errorOccupation").textContent = "❌ Please select at least one occupation.";
+      errorCount++;
+    }
+    if (!employmentChecked) {
+      document.getElementById("errorEmployment").textContent = "❌ Please select at least one employment type.";
+      errorCount++;
+    }
+    if (!durationChecked) {
+      document.getElementById("errorDuration").textContent = "❌ Please select how long you've been self-employed.";
+      errorCount++;
+    }
+    if (!businessChecked) {
+      document.getElementById("errorBusiness").textContent = "❌ Please select Nature of Business.";
+      errorCount++;
+    }
+    if (!companyChecked) {
+      document.getElementById("errorCompanyType").textContent = "❌ Please select Type of Company/Firm.";
+      errorCount++;
+    }
+    if (!professionalChecked) {
+      document.getElementById("errorProfessional").textContent = "❌ Please select Self Employed Professional option.";
+      errorCount++;
+    }
+    if (!incomeChecked) {
+      document.getElementById("errorIncome").textContent = "❌ Please select Gross Annual Income.";
+      errorCount++;
+    }
+    if (!textInputsFilled || !dateIsValid) {
+      document.getElementById("errorDateTurnover").textContent = "❌ Date format is incorrect.";
+      errorCount++;
+    }
+    if ((pep1Yes && pep1No) || (!pep1Yes && !pep1No)) {
+      document.getElementById("errorPEP").textContent = "❌ Please select either 'Yes' or 'No' for 1st Applicant.";
+      errorCount++;
+    }
+    if ((pep2Yes && pep2No) || (!pep2Yes && !pep2No)) {
+      document.getElementById("errorPEP1").textContent = "❌ Please select either 'Yes' or 'No' for 2nd Applicant.";
+      errorCount++;
+    }
+    if (selectedPaymentCount !== 1) {
+      document.getElementById("errorPayment").textContent = "❌ Please select only one mode of payment.";
+      errorCount++;
+    }
+    if (!accountFilled) {
+      if (accountErrorBox) accountErrorBox.textContent = "❌ Please fill all account amount fields completely.";
+      errorCount++;
+    }
+    if (
+      (!card1Filled && !card2Filled && !newCardChecked) ||
+      (newCardChecked && (!atm1 && !atm2 || !debitSelected))
+    ) {
+      if (cardErrorBox) cardErrorBox.textContent = "❌ Please either fill a card number or complete the New Card Request section correctly.";
+      errorCount++;
+    }
+    if (!isFDSectionValid()) {
+      if (fdErrorElement) fdErrorElement.innerText = "❌ Please complete all mandatory FD/RD selections.";
+      errorCount++;
+    }
+    if (!isFDAdditionalSectionValid()) {
+      if (additionalErrorElement) additionalErrorElement.innerText = "❌ Please select the debit source and maturity payout options.";
+      errorCount++;
+    }
+
+    if (errorCount === 0) {
+      document.getElementById("successMsg").textContent = "✅ Success! All required fields are filled.";
+      return true;
+    }
+
+    return false;
+  }
+
+  // Page analysis logic (HTML lines, script lines, size)
+  window.onload = function () {
+    const html = document.documentElement.outerHTML;
+
+    const totalLines = html.split(/\r\n|\r|\n/).length;
+
+    const scriptTags = html.match(/<script[\s\S]*?<\/script>/gi) || [];
+    let scriptLines = 0;
+    for (const tag of scriptTags) {
+      scriptLines += tag.split(/\r\n|\r|\n/).length;
+    }
+
+    const totalSize = new Blob([html]).size;
+
+    console.log("Total HTML lines:", totalLines);
+    console.log("Total <script> lines:", scriptLines);
+    console.log("Total HTML size (bytes):", totalSize);
+  };
+</script>
+</head>
+<body>
+<form onsubmit="return validateForm()">
+
+  <div class="form-group" id="occupationGroup">
+    <h4>Occupation</h4>
+    <div class="checkbox-row">
+      <label><input type="checkbox"> Salaried</label>
+      <label><input type="checkbox"> Self employed</label>
+      <label><input type="checkbox"> Retired</label>
+      <label><input type="checkbox"> Housewife</label>
+      <label><input type="checkbox"> Politician</label>
+      <label><input type="checkbox"> Student</label>
+      <label><input type="checkbox"> Others</label>
+    </div>
+    <div id="errorOccupation" class="error"></div>
+  </div>
+
+  <div class="form-group" id="employmentGroup">
+    <h4>Employment Type</h4>
+    <div class="checkbox-row">
+      <label><input type="checkbox"> Private Ltd</label>
+      <label><input type="checkbox"> Partnership</label>
+      <label><input type="checkbox"> Proprietorship</label>
+      <label><input type="checkbox"> Public Limited</label>
+      <label><input type="checkbox"> Government</label>
+      <label><input type="checkbox"> Public Sector</label>
+      <label><input type="checkbox"> Multinational</label>
+      <label><input type="checkbox"> Others</label>
+    </div>
+    <div id="errorEmployment" class="error"></div>
+  </div>
+
+  <div class="form-group" id="durationGroup">
+    <h4>Self Employed Since</h4>
+    <div class="checkbox-row">
+      <label><input type="checkbox"> 1 Year</label>
+      <label><input type="checkbox"> 2 Years</label>
+      <label><input type="checkbox"> 6 Months</label>
+      <label><input type="checkbox"> 1 Month</label>
+    </div>
+    <div id="errorDuration" class="error"></div>
+  </div>
+
+  <div class="form-group" id="businessGroup">
+    <h4>Nature of Business</h4>
+    <div class="checkbox-row">
+      <label><input type="checkbox"> Manufacturing</label>
+      <label><input type="checkbox"> Secure Provider</label>
+      <label><input type="checkbox"> Agriculture</label>
+      <label><input type="checkbox"> Bullion/Gold/Jewellery</label>
+      <label><input type="checkbox"> Stock Broker</label>
+      <label><input type="checkbox"> Real Estate</label>
+      <label><input type="checkbox"> Trade</label>
+      <label><input type="checkbox"> Money Lender</label>
+      <label><input type="checkbox"> Others</label>
+    </div>
+    <div id="errorBusiness" class="error"></div>
+  </div>
+
+  <div class="form-group" id="dateTurnoverGroup">
+    <h4>Date of Incorporation (DD/MM/YYYY)</h4>
+    <div class="text-row">
+      <input type="text" placeholder="D">
+      <input type="text" placeholder="D">
+      <input type="text" placeholder="M">
+      <input type="text" placeholder="M">
+      <input type="text" placeholder="Y">
+      <input type="text" placeholder="Y">
+      <input type="text" placeholder="Y">
+      <input type="text" placeholder="Y">
+    </div>
+    <h4>Annual Turnover (in Lacs)</h4>
+    <div class="text-row">
+      <input type="text">
+      <input type="text">
+      <input type="text">
+      <input type="text">
+    </div>
+    <div id="errorDateTurnover" class="error"></div>
+  </div>
+
+  <div class="form-group" id="companyGroup">
+    <h4>Types of Company/Firm</h4>
+    <div class="checkbox-row">
+      <label><input type="checkbox"> Sole Proprietorship</label>
+      <label><input type="checkbox"> Partnership</label>
+      <label><input type="checkbox"> Public Limited Co</label>
+      <label><input type="checkbox"> Private Ltd Co</label>
+      <label><input type="checkbox"> Others</label>
+    </div>
+    <div id="errorCompanyType" class="error"></div>
+  </div>
+
+  <div class="form-group" id="professionalGroup">
+    <h4>Self Employed Professional</h4>
+    <div class="checkbox-row">
+      <label><input type="checkbox"> Doctor</label>
+      <label><input type="checkbox"> CA/CS</label>
+      <label><input type="checkbox"> Lawyer</label>
+      <label><input type="checkbox"> Architect</label>
+      <label><input type="checkbox"> IT Consultant</label>
+      <label><input type="checkbox"> Others</label>
+    </div>
+    <div id="errorProfessional" class="error"></div>
+  </div>
+  <div class="form-group" id="incomeGroup">
+    <h4>Gross Annual Income</h4>
+    <div class="checkbox-row">
+      <label><input type="checkbox"> &lt;50,000</label>
+      <label><input type="checkbox"> 50K-1Lac</label>
+      <label><input type="checkbox"> 1-3Lac</label>
+      <label><input type="checkbox"> 3-5Lac</label>
+      <label><input type="checkbox"> 5-7.5Lac</label>
+      <label><input type="checkbox"> 7.5-10Lac</label>
+      <label><input type="checkbox"> 10-15Lac</label>
+      <label><input type="checkbox"> 12-25Lac</label>
+      <label><input type="checkbox"> 25-30Lac</label>
+      <label><input type="checkbox"> 50L-1Cr</label>
+      <label><input type="checkbox"> &gt;1Cr</label>
+    </div>
+    <div id="errorIncome" class="error"></div>
+  </div>
+  <!-- Add this just before </form> inside your existing form -->
+<div class="form-group" id="pepGroup">
+  <div style="background-color: #1338BE; padding: 8px;">
+    <font color="white"><b>(G) POLITICALLY EXPOSED PERSON (PEP) DECLARATION</b></font>
+  </div>
+  <div class="para">
+    <p>
+      Politically exposed persons (PEPs) are individuals who are or have been entrusted with prominent public functions by a foreign country
+      including the heads of States/Government, senior politicians, senior government or judicial or military officers, senior executives of
+      state-owned corporations and important political party officials. I hereby confirm and declare that I am not a politically exposed
+      person(s)/as per the definition of the Reserve Bank of India Master Direction – Know Your Customer (KYC) Direction 2016 or a relation of
+      a politically exposed person.
+    </p>
+    <h4><b>Please tick Yes/No</b></h4>
+    <div class="first">
+      1st Applicant PEP / Relative or Close Associate of PEP:
+      <input type="checkbox" name="pep1" class="checkk">Yes
+      <input type="checkbox" name="pep1" class="checkk">No
+    </div>
+    <div id="errorPEP" class="error"></div>
+    <div class="second">
+      2nd Applicant PEP / Relative or Close Associate of PEP:
+      <input type="checkbox" name="pep2" class="checkk">Yes
+      <input type="checkbox" name="pep2" class="checkk">No
+    </div>
+    <div id="errorPEP1" class="error"></div>
+  </div>
+</div>
+<div class="para"><p>I herebyagree that the Bank reserve The right to close the account incase the afuresaid decloration is found to be untrue In the Event
+    of any changing in the decloration and/or if I Subsequently become a politically Exposed person(s) or a relative of a politically Exposed
+    person,after the opening of account I hereby agree to promptly inform the Bank regarding the same and forthuith Submit the relevant
+    politically Exposed person(PEP) declaration from at an HDFC Bank branch </p></div>
+    <div class="form-group payment-section" id="paymentGroup">
+      <div class="section-title">(H) PAYMENT DETAILS: Payment done by below mode (tick one)</div>
+
+      <div class="payment-options">
+        <div class="payment-option">
+          <input type="checkbox" name="payment" value="cheque" />
+          <label>Cheque</label>
+        </div>
+        <div class="payment-option">
+          <input type="checkbox" name="payment" value="transfer" />
+          <label>HDFC Bank A/C Transfer</label>
+        </div>
+        <div class="payment-option">
+          <input type="checkbox" name="payment" value="cash" />
+          <label>Cash</label>
+        </div>
+      </div>
+
+      <div class="payment-note">
+        (To open account with cash, customer must deposit the cash in a/c opening branch only)
+      </div>
+
+      <div id="errorPayment" class="error"></div>
+    </div>
+   
+
+<div class="payment-table">
+  <!-- Header Row -->
+  <div class="header">Total Amount(RS)</div>
+  <div class="header">Cheque No./Account No. for FDRD</div>
+  <div class="header">Cheque Date</div>
+  <div class="header">Bank Name</div>
+  <div class="header">Branch</div>
+
+  <!-- Input Boxes Row -->
+  <div>
+    <div class="input-row">
+      <input type="text" maxlength="1" class="input-box">
+      <input type="text" maxlength="1" class="input-box">
+      <input type="text" maxlength="1" class="input-box">
+      <input type="text" maxlength="1" class="input-box">
+      <input type="text" maxlength="1" class="input-box">
+      <input type="text" maxlength="1" class="input-box">
+      <input type="text" maxlength="1" class="input-box">
+      <input type="text" maxlength="1" class="input-box">
+    </div>
+  </div>
+
+  <div>
+    <div class="input-row">
+      <input type="text" maxlength="1" class="input-box">
+      <input type="text" maxlength="1" class="input-box">
+      <input type="text" maxlength="1" class="input-box">
+      <input type="text" maxlength="1" class="input-box">
+      <input type="text" maxlength="1" class="input-box">
+      <input type="text" maxlength="1" class="input-box">
+      <input type="text" maxlength="1" class="input-box">
+      <input type="text" maxlength="1" class="input-box">
+      <input type="text" maxlength="1" class="input-box">
+      <input type="text" maxlength="1" class="input-box">
+      <input type="text" maxlength="1" class="input-box">
+    </div>
+  </div>
+
+  <div>
+    <div class="input-row">
+      <input type="text" maxlength="1" class="input-box">
+      <input type="text" maxlength="1" class="input-box">
+      <input type="text" maxlength="1" class="input-box">
+      <input type="text" maxlength="1" class="input-box">
+      <input type="text" maxlength="1" class="input-box">
+      <input type="text" maxlength="1" class="input-box">
+    </div>
+  </div>
+
+  <div></div> <!-- Bank Name -->
+  <div></div> <!-- Branch -->
+</div>
+<div id="errorRow1" class="error" style="color:red;"></div>
+<div id="errorRow2" class="error" style="color:red;"></div>
+ <div id="errorRow3" class="error" style="color:red;"></div>
+
+<div class="note">
+  cheque should be crossed A/C payee and drawn payable to "HDFC BANK LTD.A/C."
+</div>
+
+<div class="account-section">
+  <div class="account-block">
+    <b>Amount(Rs) for SB account</b>
+    <div class="input-boxes">
+      <input type="text" maxlength="1">
+      <input type="text" maxlength="1">
+      <input type="text" maxlength="1">
+      <input type="text" maxlength="1">
+      <input type="text" maxlength="1">
+      <input type="text" maxlength="1">
+      <input type="text" maxlength="1">
+      <input type="text" maxlength="1">
+    </div>
+  </div>
+
+  <div class="account-block">
+    <b>Amount(Rs) for FD/RD account</b>
+    <div class="input-boxes">
+      <input type="text" maxlength="1">
+      <input type="text" maxlength="1">
+      <input type="text" maxlength="1">
+      <input type="text" maxlength="1">
+      <input type="text" maxlength="1">
+      <input type="text" maxlength="1">
+      <input type="text" maxlength="1">
+      <input type="text" maxlength="1">
+      <input type="text" maxlength="1">
+      <input type="text" maxlength="1">
+    </div>
+  </div>
+
+  <div class="account-block">
+    <b>Amount(Rs) for PPF account</b>
+    <div class="input-boxes">
+      <input type="text" maxlength="1">
+      <input type="text" maxlength="1">
+      <input type="text" maxlength="1">
+      <input type="text" maxlength="1">
+      <input type="text" maxlength="1">
+      <input type="text" maxlength="1">
+      <input type="text" maxlength="1">
+      <input type="text" maxlength="1">
+      <input type="text" maxlength="1">
+    </div>
+  </div>
+
+  <div class="account-block">
+    <b>Amount(Rs) for SSA account</b>
+    <div class="input-boxes">
+      <input type="text" maxlength="1">
+      <input type="text" maxlength="1">
+      <input type="text" maxlength="1">
+      <input type="text" maxlength="1">
+      <input type="text" maxlength="1">
+      <input type="text" maxlength="1">
+      <input type="text" maxlength="1">
+      <input type="text" maxlength="1">
+      <input type="text" maxlength="1">
+    </div>
+  </div>
+</div>
+
+<div id="errorAccountSection" style="color:red; font-weight:bold;"></div>
+
+
+<div class="container">
+  <!-- LEFT SECTION -->
+  <div class="left">
+    <h2>(i)ATM CARD/DEBIT CARD</h2>
+    <label class="checkbox-label">
+      <input type="checkbox"> <strong>Existing Card Linkage:</strong>
+      Customer can mention their Card No to which they want to link this account
+    </label>
+    <div class="note">(please note the faculty is available for operating instructions: Single, Either or Survivor only)</div>
+
+    <div class="card-input-row">
+      <label>1st Card No:</label>
+      <input type="text" maxlength="1"><input type="text" maxlength="1"><input type="text" maxlength="1"><input type="text" maxlength="1">
+      <input type="text" maxlength="1"><input type="text" maxlength="1"><input type="text" maxlength="1"><input type="text" maxlength="1">
+      <input type="text" maxlength="1"><input type="text" maxlength="1"><input type="text" maxlength="1"><input type="text" maxlength="1">
+      <input type="text" maxlength="1"><input type="text" maxlength="1"><input type="text" maxlength="1"><input type="text" maxlength="1">
+    </div>
+
+    <div class="card-input-row">
+      <label>2nd Card No:</label>
+      <input type="text" maxlength="1"><input type="text" maxlength="1"><input type="text" maxlength="1"><input type="text" maxlength="1">
+      <input type="text" maxlength="1"><input type="text" maxlength="1"><input type="text" maxlength="1"><input type="text" maxlength="1">
+      <input type="text" maxlength="1"><input type="text" maxlength="1"><input type="text" maxlength="1"><input type="text" maxlength="1">
+      <input type="text" maxlength="1"><input type="text" maxlength="1"><input type="text" maxlength="1"><input type="text" maxlength="1">
+    </div>
+  </div>
+
+  <!-- RIGHT SECTION -->
+  <div class="right">
+    <h2><input type="checkbox"> <strong>New Card Request</strong></h2>
+
+    <div class="new-card-box">
+      <!-- ATM Card Column -->
+      <div class="atm-card">
+        <div class="atm-card-header">ATM Card</div>
+        <div class="atm-card-options">
+          <label>1st <input type="checkbox"></label>
+          <label>2nd <input type="checkbox"></label>
+        </div>
+      </div>
+
+      <!-- Debit Card Column -->
+      <div class="debit-card">
+        <div class="debit-card-header">Debit Card<br>(changes Applicable)</div>
+        <div class="debit-card-options">
+          <label><input type="checkbox"> Regular</label>
+          <label><input type="checkbox"> Platinum</label>
+          <label><input type="checkbox"> Others</label>
+          <label><input type="checkbox"> Regular</label>
+          <label><input type="checkbox"> Platinum</label>
+          <label><input type="checkbox"> Others</label>
+        </div>
+      </div>
+    </div>
+
+   <div style="margin-left: 400px; font-size: 15px; line-height: 1.5; margin-top: -120px;">
+    <div>Your Debit Card is activated for Domestic</div>
+    <div>Usage(POS&amp;ATM) please login into NetBanking or IVR for Activating International Domestic/Econ&amp;contactless</div>
+    
+  </div>
+
+    <div class="right-notes">
+      <strong>If Other Mention Card</strong><br>
+      <span class="red-text">To be filled by bank staff only</span><br>
+      <div class="code-boxes">
+        <input type="text" maxlength="1"><input type="text" maxlength="1"><input type="text" maxlength="1"><input type="text" maxlength="1">
+      </div>
+    </div>
+
+    <div class="right-notes">
+      <strong>If Other Mention Card Code</strong><br>
+      <span class="red-text">To be filled by bank staff only</span><br>
+      <div class="code-boxes">
+        <input type="text" maxlength="1"><input type="text" maxlength="1"><input type="text" maxlength="1"><input type="text" maxlength="1">
+      </div>
+    </div>
+  </div>
+</div>
+<div id="cardError" style="color: red; font-weight: bold; margin-top: 10px;"></div>
+
+<div class="back"><div class="back1">(J)INSTRUCTION FOR FIXED DEPOSIT/RECURRING DEPOSIT(please attach annexure & refer T&C in details for SureCover FD & Health Cover FD )</div></div>
+        <div>
+          <div class="back2">
+            <font color="black">
+              <div class="b1">I/We wish to  </div>
+              <div class="b2"><input type="checkbox" class="check23"></div>
+              <div class="b3">With drawable FD </div>
+              <div class="b4"><input type="checkbox" class="check23"></div>
+              <div class="b5"><font color="red">Non With drawble FD </font></div>
+            <div class="b6"><input type="checkbox" class="check23"></div>
+            <div class="b7">Tax saving FD</div>
+            <div class="b8"><input type="checkbox" class="check23"></div>
+            <div class="b9">SureCover FD</div>
+            <div class="b10"><input type="checkbox" class="check23"></div>
+            <div class="b11">HelathCover FD</div>
+          <div class="b12"><input type="checkbox" class="check23"></div>
+          <div class="b13">RD as ticked below</div></font>
+          </div>
+        </div>
+        <div>
+          <div class="back3">
+            <div class="bac1">
+            <div class="ba1"><h3>Holding pattern for FD/MD</h3></div>
+          </div>
+            <div class="bac2">
+              <div class="ba2"><h3>Operating Instruction</h3></div>
+            </div>
+
+            <div class="bac3">
+              <div class="ba3"><input type="checkbox" class="check"></div>
+              <div class="ba4"> 1st Applicant only</div>
+              <div class="ba5"><input type="checkbox" class="check"></div>
+              <div class="ba6"> 2nd Applicant only</div>
+              <div class="ba7"><input type="checkbox" class="check"></div>
+              <div class="ba8"> 1st&2nd Applicant only</div>
+              <div class="ba9"><input type="checkbox" class="check"></div>
+              <div class="ba10"> 2nd&1st Applicant only</div>
+            </div>
+            <div class="bac4">
+              <div class="ba11"><input type="checkbox" class="check"></div>
+              <div class="ba12">Single</div>
+              <div class="ba13"><input type="checkbox" class="check"></div>
+              <div class="ba14">Either or Survivor</div>
+              <div class="ba15"><input type="checkbox" class="check"></div>
+              <div class="ba16">Forms or Survivor</div>
+              <div class="ba17"><input type="checkbox" class="check"></div>
+              <div class="ba18">Minor and Guardian</div>
+              <div class="ba19"><input type="checkbox" class="check"></div>
+              <div class="ba20">Jointly</div>
+            </div>
+            <div class="ba21"><input type="checkbox" class="ck1"></div>
+            <div class="ba22">I/We wish to have the maturity/Intrest payout through NEFT (Refer T&C)
+              <div class="ba23"><h3>Beneficiary Account No</h3></div>
+              <div class="box8">
+                <div class="ba24"><input type="checkbox" class="check"></div>
+                <div class="r1"><input type="checkbox" class="check"></div>
+                <div class="r2"><input type="checkbox" class="check"></div>
+                <div class="r3"><input type="checkbox" class="check"></div>
+                <div class="r4"><input type="checkbox" class="check"></div>
+                <div class="r5"><input type="checkbox" class="check"></div>
+                <div class="r6"><input type="checkbox" class="check"></div>
+                <div class="r7"><input type="checkbox" class="check"></div>
+                <div class="r8"><input type="checkbox" class="check"></div>
+                <div class="r9"><input type="checkbox" class="check"></div>
+                <div class="r10"><input type="checkbox" class="check"></div>
+                <div class="r11"><input type="checkbox" class="check"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="div1">
+          <p>FD advice will be sent to the registered wmail.For Tax Savings Fo,and for customer Where email id is not registered, the advice will be dispatched at mailing address </br> within 7.8 working days of Fo banking I/we agree that in case of joint fixed deposit with survivorship  the bank shall be discharged by pagine the fixed deposit </br> proceeds permantatly to survivors on request in the event if death of one or more joint deposition I/we are that in withdrawable FD cannot be closed before expiry </br>  of the Further partial withdrawal or sweep in is not allowed in such deposit.Non with drawble deposit will be booked with option Do not RENEW. Non with drawble</br> deposit canot be pledged for any Security like overdraft facility issueme of Lc/BG or zny other etc</p>
+        </div>
+        <div>
+          <div class="ben"><h3>Benefeciary IFSC code</h3></div>
+          <div class="div2">
+            <div class="s1"><input type="checkbox" class="check"></div>
+            <div class="s2"><input type="checkbox" class="check"></div>
+            <div class="s3"><input type="checkbox" class="check"></div>
+            <div class="s4"><input type="checkbox" class="check"></div>
+            <div class="s5"><input type="checkbox" class="check"></div>
+            <div class="s6"><input type="checkbox" class="check"></div>
+            <div class="s7"><input type="checkbox" class="check"></div>
+            <div class="s8"><input type="checkbox" class="check"></div>
+            
+          </div>
+           </div></br>
+          <div id="fdCheckboxError" style="color: red; font-weight: bold; margin-top: 10px;"></div>
+
+            <div class="div3"><center><b>Not Applicable For Recurring Deposit</b></center></div>
+        <div>
+          <div class="div4">
+          <div class="u1"><b>FD/RD Tenure</b></div>
+        </div>
+          <div class="div5">
+          <div class="u2"><b>Months</b></div>
+        </div>
+          <div class="div6">
+          <div class="u3"><b>Days</b></div>
+        </div>
+          <div class="div7">
+            <div class="u4"><input type="checkbox" class="check"></div>
+            <div class="u5"><input type="checkbox" class="check"></div>
+            <div class="u6"><input type="checkbox" class="check"></div>
+          </div>
+          <div class="div8">
+            
+            <div class="u7"><input type="checkbox" class="check"></div>
+            <div class="u8"><input type="checkbox" class="check"></div>
+            <div class="u9"><input type="checkbox" class="check"></div>
+          </div>
+        </div>
+        <div class="div9">
+          <div class="u10"><b>Rate of Interest%</b></div>
+        </div>
+        <div class="div10">
+          <div class="u11"><input type="checkbox" class="check"></div>
+            <div class="u12"><input type="checkbox" class="check"></div>
+            <div class="u13"><input type="checkbox" class="check"></div>
+
+
+        </div>
+        <div class="fact">
+          <div class="u14"><b>Interest Payment</b></div>
+        </div>
+        <div class="fact1">
+          <div class="u15"><b>Maturity Instruction</b></div>
+        </div>
+        <div class="fact2">
+          <div class="u16"><b>Tick anyone</b></div>
+        </div>
+        <div class="fact3">
+          <div class="u17"><b>Monthly</b></div>
+        </div>
+        <div class="fact4">
+          <div class="u18"><b>Quarterly</b></div>
+        </div>
+        <div class="fact5">
+          <div class="u19"><b>Maturity</b></div>
+        </div>
+        <div class="fact6">
+          <div><input type="checkbox" class="ck2"></div>
+        </div>
+        <div class="fact7">
+          <div><input type="checkbox" class="ck3"></div>
+        </div>
+        <div class="fact8">
+          <div><input type="checkbox" class="ck4"></div>
+        </div>
+        <div class="fact9">
+          <div><b>Renew Principal & Interest</b></div>
+        </div>
+        <div class="fact10">
+          <div><b>Renew Principal & Pay Interest</b></div>
+        </div>
+        <div class="fact11">
+          <div class="u20"><b>Do not Renew</b></div>
+        </div>
+        <div class="fact12">
+          <div><input type="checkbox" class="ck6"></div>
+        </div>
+        <div class="fact13">
+          <div><input type="checkbox" class="ck5"></div>
+        </div>
+        <div class="fact14">
+          <div><input type="checkbox" class="ck7"></div>
+        </div>
+        <div class="fact15">
+          <div class="u21"><b>Super Saver</b></div>
+        </div>
+        <div class="fact16">
+          <div class="u22"><b>Sweep in</b></div>
+        </div>
+        <div class="fact17">
+          <div><input type="checkbox" class="ck8"></div>
+        </div>
+        <div class="fact18">
+          <div><input type="checkbox" class="ck9"></div>
+        </div>
+        
+        <div class="fact19">Type of Account</div>
+        <div class="fact20"><input type="checkbox" class="check"></div>
+        <div class="fact21">Savings</div>
+        <div class="fact22"><input type="checkbox" class="check"></div>
+        
+        <div class="fact24">Benefeciary Bank & Branch Name</div>
+        
+        <div class="d1"><input type="checkbox" class="check"></div>
+        <div class="d2"><input type="checkbox" class="ck10"></div>
+        <div class="d3"><input type="checkbox" class="ck11"></div>
+        <div class="d4"><input type="checkbox" class="ck12"></div>
+        <div class="d5"><input type="checkbox" class="ck13"></div>
+        <div class="d6"><input type="checkbox" class="ck14"></div>
+        <div class="d7"><input type="checkbox" class="ck15"></div>
+        <div class="d8"><input type="checkbox" class="ck16"></div>
+        <div class="d9"><input type="checkbox" class="ck17"></div>
+        <div class="d10"><input type="checkbox" class="ck18"></div>
+                <div class="d1"><input type="checkbox" class="check"></div>
+        <div class="d2"><input type="checkbox" class="ck10"></div>
+        <div class="d3"><input type="checkbox" class="ck11"></div>
+        <div class="d4"><input type="checkbox" class="ck12"></div>
+        <div class="d5"><input type="checkbox" class="ck13"></div>
+        <div class="d6"><input type="checkbox" class="ck14"></div>
+        <div class="d7"><input type="checkbox" class="ck15"></div>
+        <div class="d8"><input type="checkbox" class="ck16"></div>
+        <div class="d9"><input type="checkbox" class="ck17"></div>
+        <div class="d10"><input type="checkbox" class="ck18"></div>
+        </div>
+        <div id="fdSectionError" style="color: red; margin-top: 10px;"></div>
+
+        <div class="p1">Please Debit</div>
+        <div class="p2"><input type="checkbox" class="ck19"></div>
+        <div class="p3">New a/c/Existing a/c no.</div>
+        <div class="p4"><input type="checkbox" class="ck20"></div>
+        <div class="p5"><input type="checkbox" class="ck21"></div>
+        <div class="p6"><input type="checkbox" class="check"></div>
+        <div class="p7"><input type="checkbox" class="check"></div>
+        <div class="p8"><input type="checkbox" class="check"></div>
+        <div class="p9"><input type="checkbox" class="check"></div>
+        <div class="p10"><input type="checkbox" class="check"></div>
+        <div class="p11"><input type="checkbox" class="check"></div>
+        <div class="p12"><input type="checkbox" class="check"></div>
+        <div class="p13"><input type="checkbox" class="check"></div>
+        <div class="p14"><input type="checkbox" class="check"></div>
+        <div class="p15"><input type="checkbox" class="check"></div>
+        <div class="p16"><input type="checkbox" class="check"></div>
+        <div class="p17"><input type="checkbox" class="check"></div>
+        <div class="p18"><input type="checkbox" class="check"></div>
+        <div class="p19"><input type="checkbox" class="check"></div>
+        <div class="p20"><input type="checkbox" class="check"></div> 
+        <div class="p21">For RD</div>
+        <div class="p22"><p>Installments/FD booking and also credit the maturity/interest in the same account. I/We further understand that Super saver or Sweap.
+      In</p> <p>facility if requested will be activated in the same account</p></div>
+      <div class="text1"><input type="text" placeholder="1st Appl.Signature" class="text2"></div>
+      <div class="text3"><input type="text" placeholder="2nd Appl.Signature" class="text2"></div>
+      <div class="v1"><input type="checkbox" class="check"></div>
+      <div class="v2">I/We wish to have the maturity / intrested payout through manager's cheque at my mailing address for the above FD/RD </div>
+      <div class="v3"><input type="checkbox" class="check"></div>
+      <div class="v4">Convert to found Deposit for tenure of 1 year 1 day </div>
+      <div class="v5"><input type="checkbox" class="check"></div>
+      <div class="v6">Only Principal</div>
+      <div class="v7"><input type="checkbox" class="check"></div>
+      <div class="v8">Principal Interest</div>
+      <div class="v9">Deposit will be reinvestment of interest with maturityinstruction as Renew Principle & Interest</div>
+      <div class="w1">*TDS Details for FD/RD:Debust TDS(if applicable) </div>
+      <div class="w2"><input type="checkbox" class="check"></div>
+      <div class="w3">Yes </div>
+      <div class="w4"><input type="checkbox" class="check"></div>
+      <div class="w5">No if No ,attach </div>
+      <div class="w6"><input type="checkbox" class="check"></div>
+      <div class="w7">Form 15G/H</div>
+      <div class="w8"><input type="checkbox" class="check"></div>
+      <div class="w9">Income Tax< exemption letter</div>
+      <div class="w10"><input type="checkbox" class="check"></div>
+      <div class="w11">Waiver market on cast ID</div>
+    
+<div id="fdAdditionalSectionError" style="color: red; font-weight: bold; margin-top: 5px;"></div>
+
+        
+
+ 
+
+  <button type="submit">Submit</button>
+  <div id="formError" class="error"></div>
+  <div id="successMsg" class="success"></div>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form Validation</title>
+  <link rel="stylesheet" type="text/css" href="fstyle.css">
+</head>
+<body bgcolor="EED6BA">   
+<form onsubmit="return validateOccupation()">
+  <div class="top1"><b>(F)CUSTOMER PROFILE DETAILS#-1st APPLICANT</b></div>
+  
+  <div>
+    <div class="top2">Occupation</div>
+    <div class="top3"><input type="checkbox" class="check" class="occupation-check"></div>
+    <div class="top4">Salaried</div> 
+    <div class="top5"><input type="checkbox" class="check" class="occupation-check"></div>
+    <div class="top6">Self employed</div>
+    <div class="top7"><input type="checkbox" class="check" class="occupation-check"></div>
+    <div class="top8">Retired</div>
+    <div class="top9"><input type="checkbox" class="check" class="occupation-check"></div>
+    <div class="top10">Self employed prof</div>
+    <div class="top11"><input type="checkbox" class="check" class="occupation-check"></div>
+    <div class="top12">House wife</div>
+    <div class="top13"><input type="checkbox" class="check" class="occupation-check"></div>
+    <div class="top14">Politician</div>
+    <div class="top15"><input type="checkbox" class="check" class="occupation-check"></div>
+    <div class="top16">Student</div>
+    <div class="top17"><input type="checkbox" class="check" class="occupation-check"></div>
+    <div class="top18">Others----------------------</div> 
+    
+  </div>
+  <div id="errorOccupation" class="error"></div>
+
+  <div>
+    <div class="top19">if salaried employed with</div>
+    <div class="top20"><input type="checkbox" class="check" class="employment-type-check"></div>
+    <div class="top21">Private ltd</div> 
+    <div class="top22"><input type="checkbox" class="check" class="employment-type-check"></div>
+    <div class="top23">Partnership</div>
+    <div class="top24"><input type="checkbox" class="check" class="employment-type-check"></div>
+    <div class="top25">Proprietership</div>
+    <div class="top26"><input type="checkbox" class="check" class="employment-type-check" ></div>
+    <div class="top27">Public limited</div>
+    <div class="top28"><input type="checkbox" class="check" class="employment-type-check"></div>
+    <div class="top29">Public sector</div>
+    <div class="top30"><input type="checkbox" class="check" class="employment-type-check"></div>
+    <div class="top31">Government</div>
+    <div class="top32"><input type="checkbox" class="check" class="employment-type-check"></div>
+    <div class="top33">Multinational</div>
+    <div class="top34"><input type="checkbox" class="check" class="employment-type-check"></div>
+    <div class="top35">Others----------------------</div>
+    
+    
+    
+  </div><hr style="background-color: black;">
+  <div>
+    <div class="top36">Self Employed since</div>
+    <div class="top20"><input type="checkbox" class="check"></div>
+    <div class="top220"><input type="checkbox" class="check"></div>
+    <div class="top37">Years</div> 
+    <div class="top210"><input type="checkbox" class="check"></div>
+    <div class="top230"><input type="checkbox" class="check"></div>
+    <div class="top38">Months</div>
+
+
+  </div>
+  <div>
+    <div class="top39">Nature of Business</div>
+    <div class="top40"><input type="checkbox" class="check"></div>
+    <div class="top41">Manufacturing</div> 
+    <div class="top42"><input type="checkbox" class="check"></div>
+    <div class="top43">Secure Provider</div>
+    <div class="top44"><input type="checkbox" class="check"></div>
+    <div class="top45">Agriculture</div>
+    <div class="top46"><input type="checkbox" class="check"></div>
+    <div class="top47">Bullion/Gold/Jewellery</div>
+    <div class="top48"><input type="checkbox" class="check"></div>
+    <div class="top49">Stock Broken</div>
+    <div class="top50"><input type="checkbox" class="check"></div>
+    <div class="top51">Real Estate</div>
+    <div class="top52"><input type="checkbox" class="check"></div>
+    <div class="top53">Trade</div>
+    <div class="top54"><input type="checkbox" class="check"></div>
+    <div class="top55">Money Lender</div>
+    <div class="top56"><input type="checkbox" class="check"></div>
+    <div class="top57">Others----------------</div>
+    
+    
+    
+  </div>
+  <div>
+    <div class="top58">Data of incorporation</div>
+    <div class="top59"><input type="text" class="check1" placeholder="D"></div>
+    <div class="top60"><input type="text" class="check1" placeholder="D"></div>
+    <div class="top61"><input type="text" class="check1" placeholder="M"></div>
+    <div class="top62"><input type="text" class="check1" placeholder="M"></div>
+    <div class="top63"><input type="text" class="check1" placeholder="Y"></div>
+    <div class="top64"><input type="text" class="check1" placeholder="Y"></div>
+    <div class="top65"><input type="text" class="check1" placeholder="Y"></div>
+    <div class="top66"><input type="text" class="check1" placeholder="Y"></div>
+    <div class="top67">Annual Turnover(in lacs)</div>
+    <div class="top68"><input type="text" class="check1" placeholder=""></div>
+    <div class="top69"><input type="text" class="check1" placeholder=""></div>
+    <div class="top70"><input type="text" class="check1" placeholder=""></div>
+    <div class="top71"><input type="text" class="check1" placeholder=""></div>
+    <div class="top72">(Application for Correct Account)</div>
+    
+    
+  </div>
+
+  <div>
+    <div class="top73">Types of company/Firm</div>
+    <div class="top74"><input type="checkbox" class="check"></div>
+    <div class="top75">Sole Proprietership</div> 
+    <div class="top76"><input type="checkbox" class="check"></div>
+    <div class="top77">Partnership</div>
+    <div class="top78"><input type="checkbox" class="check"></div>
+    <div class="top79">Public limited co</div>
+    <div class="top80"><input type="checkbox" class="check"></div>
+    <div class="top81">Private Ltd Co</div>
+    
+    <div class="top88"><input type="checkbox" class="check"></div>
+    <div class="top89">Others----------------------</div>
+    
+    
+    
+  </div>
+
+  <div>
+    <div class="top90">Self Employed Professional</div>
+    <div class="top91"><input type="checkbox" class="check"></div>
+    <div class="top92">Doctor</div> 
+    <div class="top93"><input type="checkbox" class="check"></div>
+    <div class="top94">CA/CS</div>
+    <div class="top95"><input type="checkbox" class="check"></div>
+    <div class="top96">Lawyer</div>
+    <div class="top97"><input type="checkbox" class="check"></div>
+    <div class="top98">Architect</div>
+    <div class="top99"><input type="checkbox" class="check"></div>
+    <div class="top100">IT Consultent</div>
+    
+    <div class="top105"><input type="checkbox" class="check"></div>
+    <div class="top106">Others----------------------</div>
+    
+    
+    
+    
+  </div><hr>
+  <div>
+    <div class="a1">Source of funds </div>
+    <div class="a2"><input type="checkbox" class="check"></div>
+    <div class="a3">Salary </div>
+    <div class="a4"><input type="checkbox" class="check"></div>
+    <div class="a5">Business income</div>
+    <div class="a6"><input type="checkbox" class="check"></div>
+    <div class="a7">Agriculture</div>
+    <div class="a8"><input type="checkbox" class="check"></div>
+    <div class="a9">Investment Income</div>
+
+  </div>
+  <div>
+    <div class="a10">Gross Anual Income</div>
+    <div class="a11"><input type="checkbox" class="check"></div>
+    <div class="a12"><50000</div>
+    <div class="a13"><input type="checkbox" class="check"></div>
+    <div class="a14">50k-1lac</div>
+    <div class="a15"><input type="checkbox" class="check"></div>
+    <div class="a16">1-3lac</div>
+    <div class="a17"><input type="checkbox" class="check"></div>
+    <div class="a18">3-5lac</div>
+    <div class="a19"><input type="checkbox" class="check"></div>
+    <div class="a20">5-7.5lac</div>
+    <div class="a21"><input type="checkbox" class="check"></div>
+    <div class="a22">7.5-10lac</div>
+    <div class="a23"><input type="checkbox" class="check"></div>
+    <div class="a24">10-15lac</div>
+    <div class="a25"><input type="checkbox" class="check"></div>
+    <div class="a26">12-25lac</div>
+    <div class="a27"><input type="checkbox" class="check"></div>
+    <div class="a28">25-30lac</div>
+    <div class="a29"><input type="checkbox" class="check"></div>
+    <div class="a30">50-lcr</div>
+    <div class="a31"><input type="checkbox" class="check"></div>
+    <div class="a32">>1cr</div>
+
+  </div>
+  
+  <div class="top1"><b>(F)CUSTOMER PROFILE DETAILS#-2nd APPLICANT</b></div>
+  <div>
+    <div class="top2">Occupation</div>
+    <div class="top3"><input type="checkbox" class="check"></div>
+    <div class="top4">Salaried</div> 
+    <div class="top5"><input type="checkbox" class="check"></div>
+    <div class="top6">Self employed</div>
+    <div class="top7"><input type="checkbox" class="check"></div>
+    <div class="top8">Retired</div>
+    <div class="top9"><input type="checkbox" class="check"></div>
+    <div class="top10">Self employed prof</div>
+    <div class="top11"><input type="checkbox" class="check"></div>
+    <div class="top12">House wife</div>
+    <div class="top13"><input type="checkbox" class="check" ></div>
+    <div class="top14">Politician</div>
+    <div class="top15"><input type="checkbox" class="check"></div>
+    <div class="top16">Student</div>
+    <div class="top17"><input type="checkbox" class="check" ></div>
+    <div class="top18">Others----------------------</div>
+    
+    
+    
+  </div>
+  <div>
+    <div class="top19">if salaried employed with</div>
+    <div class="top20"><input type="checkbox" class="check"></div>
+    <div class="top21">Private ltd</div> 
+    <div class="top22"><input type="checkbox" class="check"></div>
+    <div class="top23">Partnership</div>
+    <div class="top24"><input type="checkbox" class="check"></div>
+    <div class="top25">Proprietership</div>
+    <div class="top26"><input type="checkbox" class="check"></div>
+    <div class="top27">Public limited</div>
+    <div class="top28"><input type="checkbox" class="check"></div>
+    <div class="top29">Public sector</div>
+    <div class="top30"><input type="checkbox" class="check"></div>
+    <div class="top31">Government</div>
+    <div class="top32"><input type="checkbox" class="check"></div>
+    <div class="top33">Multinational</div>
+    <div class="top34"><input type="checkbox" class="check" ></div>
+    <div class="top35">Others----------------------</div>
+    
+    
+    
+  </div><hr style="background-color: black;">
+  <div>
+    <div class="top36">Self Employed since</div>
+    <div class="top20"><input type="checkbox" class="check"></div>
+    <div class="top220"><input type="checkbox" class="check"></div>
+    <div class="top37">Years</div> 
+    <div class="top210"><input type="checkbox" class="check"></div>
+    <div class="top230"><input type="checkbox" class="check"></div>
+    <div class="top38">Months</div>
+
+
+  </div>
+  <div>
+    <div class="top39">Nature of Business</div>
+    <div class="top40"><input type="checkbox" class="check"></div>
+    <div class="top41">Manufacturing</div> 
+    <div class="top42"><input type="checkbox" class="check"></div>
+    <div class="top43">Secure Provider</div>
+    <div class="top44"><input type="checkbox" class="check"></div>
+    <div class="top45">Agriculture</div>
+    <div class="top46"><input type="checkbox" class="check"></div>
+    <div class="top47">Bullion/Gold/Jewellery</div>
+    <div class="top48"><input type="checkbox" class="check"></div>
+    <div class="top49">Stock Broken</div>
+    <div class="top50"><input type="checkbox" class="check"></div>
+    <div class="top51">Real Estate</div>
+    <div class="top52"><input type="checkbox" class="check"></div>
+    <div class="top53">Trade</div>
+    <div class="top54"><input type="checkbox" class="check"></div>
+    <div class="top55">Money Lender</div>
+    <div class="top56"><input type="checkbox" class="check"></div>
+    <div class="top57">Others----------------</div>
+    
+    
+    
+  </div>
+  <div>
+    <div class="top58">Data of incorporation</div>
+    <div class="top59"><input type="text" class="check1" placeholder="D"></div>
+    <div class="top60"><input type="text" class="check1" placeholder="D"></div>
+    <div class="top61"><input type="text" class="check1" placeholder="M"></div>
+    <div class="top62"><input type="text" class="check1" placeholder="M"></div>
+    <div class="top63"><input type="text" class="check1" placeholder="Y"></div>
+    <div class="top64"><input type="text" class="check1" placeholder="Y"></div>
+    <div class="top65"><input type="text" class="check1" placeholder="Y"></div>
+    <div class="top66"><input type="text" class="check1" placeholder="Y"></div>
+    <div class="top67">Annual Turnover(in lacs)</div>
+    <div class="top68"><input type="text" class="check1" placeholder=""></div>
+    <div class="top69"><input type="text" class="check1" placeholder=""></div>
+    <div class="top70"><input type="text" class="check1" placeholder=""></div>
+    <div class="top71"><input type="text" class="check1" placeholder=""></div>
+    <div class="top72">(Application for Correct Account)</div>
+    
+    
+  </div>
+
+  <div>
+    <div class="top73">Types of company/Firm</div>
+    <div class="top74"><input type="checkbox" class="check"></div>
+    <div class="top75">Sole Proprietership</div> 
+    <div class="top76"><input type="checkbox" class="check"></div>
+    <div class="top77">Partnership</div>
+    <div class="top78"><input type="checkbox" class="check"></div>
+    <div class="top79">Public limited co</div>
+    <div class="top80"><input type="checkbox" class="check"></div>
+    <div class="top81">Private Ltd Co</div>
+    
+    <div class="top88"><input type="checkbox" class="check"></div>
+    <div class="top89">Others----------------------</div>
+    
+    
+    
+  </div>
+
+  <div>
+    <div class="top90">Self Employed Professional</div>
+    <div class="top91"><input type="checkbox" class="check"></div>
+    <div class="top92">Doctor</div> 
+    <div class="top93"><input type="checkbox" class="check"></div>
+    <div class="top94">CA/CS</div>
+    <div class="top95"><input type="checkbox" class="check"></div>
+    <div class="top96">Lawyer</div>
+    <div class="top97"><input type="checkbox" class="check"></div>
+    <div class="top98">Architect</div>
+    <div class="top99"><input type="checkbox" class="check"></div>
+    <div class="top100">IT Consultent</div>
+    
+    <div class="top105"><input type="checkbox" class="check"></div>
+    <div class="top106">Others----------------------</div>
+    
+    
+    
+    
+  </div><hr>
+  <div>
+    <div class="a1">Source of funds </div>
+    <div class="a2"><input type="checkbox" class="check"></div>
+    <div class="a3">Salary </div>
+    <div class="a4"><input type="checkbox" class="check"></div>
+    <div class="a5">Business income</div>
+    <div class="a6"><input type="checkbox" class="check"></div>
+    <div class="a7">Agriculture</div>
+    <div class="a8"><input type="checkbox" class="check"></div>
+    <div class="a9">Investment Income</div>
+
+  </div>
+  <div>
+    <div class="a10">Gross Anual Income</div>
+    <div class="a11"><input type="checkbox" class="check"></div>
+    <div class="a12"><50000</div>
+    <div class="a13"><input type="checkbox" class="check"></div>
+    <div class="a14">50k-1lac</div>
+    <div class="a15"><input type="checkbox" class="check"></div>
+    <div class="a16">1-3lac</div>
+    <div class="a17"><input type="checkbox" class="check"></div>
+    <div class="a18">3-5lac</div>
+    <div class="a19"><input type="checkbox" class="check"></div>
+    <div class="a20">5-7.5lac</div>
+    <div class="a21"><input type="checkbox" class="check"></div>
+    <div class="a22">7.5-10lac</div>
+    <div class="a23"><input type="checkbox" class="check"></div>
+    <div class="a24">10-15lac</div>
+    <div class="a25"><input type="checkbox" class="check"></div>
+    <div class="a26">12-25lac</div>
+    <div class="a27"><input type="checkbox" class="check"></div>
+    <div class="a28">25-30lac</div>
+    <div class="a29"><input type="checkbox" class="check"></div>
+    <div class="a30">50-lcr</div>
+    <div class="a31"><input type="checkbox" class="check"></div>
+    <div class="a32">>1cr</div>
+
+  </div>
+  <hr>
+
+  <div>
+    <div class="top1" style="background-color: #1338BE;"><font color="white"><b>(G)POLITICALLY EXPOSED PERSON(PEP)DECLARATION</b></font></div>
+    <div class="para"><p> 
+      politically exposed persons(PEPS) are individuals who are or have  been exhusted with prominent public functions by a foreign country
+      including the heads of States/Governement senior politicians,Senior government or judicial or military officors,Senior executives of state-owned corporations and important political party officials I hereby confirm and declare that Iam not a politically exposed persons(s)/as  the definition of the Reserve Bank of India Master Direction-know you Customer(KYC) Direction 2016 or a relation of a politically Exposed person
+    </p>
+    <p><b><h4>Please tick Yes/No</h4></b></p> 
+    <p class="first">1st Applicant PEP/Relative or close Associate of PIP<input type="checkbox" class="checkk">Yes<input type="checkbox" class="checkk">No
+      <div class="second">2nd Applicant PEP/Relative or close Associate of PIP<input type="checkbox" class="checkk">Yes<input type="checkbox" class="checkk">No</div>
+     </p>
+  </div>
+  <div class="para"><p>I herebyagree that the Bank reserve The right to close the account incase the afuresaid decloration is found to be untrue In the Event
+    of any changing in the decloration and/or if I Subsequently become a politically Exposed person(s) or a relative of a politically Exposed
+    person,after the opening of account I hereby agree to promptly inform the Bank regarding the same and forthuith Submit the relevant
+    politically Exposed person(PEP) declaration from at an HDFC Bank branch </p></div>
+ 
+      </div><hr class="col1">
+      <div>
+        <div class="top2"><b><font size="5px">(H)PAYMENT DETAILS:payment done by below mode(tick one)</font></b></div>
+        <div class="top2"><input type="checkbox" class="check">
+        <div class="f1">Cheque</div>
+        <div class="f2"><input type="checkbox" class="check"></div>
+        <div class="f3">HDFC Bank A/C Transfer</div>
+        <div class="f4"><input type="checkbox" class="check"></div>
+        <div class="f5">Cash</div>
+        <div class="f6"><font color="red">(To open account with cash,customer must deposit the cash in a/c opening branch only)</font></div></div>
+      </div>
+      <div class="main">
+        <div class="sub1"><center class="center">Total Amount(RS)</center></div>
+        <div class="sub2"><center class="center">Cheque No./Account No.for FDRD</center></div>
+        <div class="sub3"><center class="center">Cheque Date</center></div>
+        <div class="sub4"><center class="center">Bank Name</center></div>
+        <div class="sub5"><center class="center">Branch</center></div>
+        <div class="sub6">
+          <div class="c1"><input type="checkbox" class="check22"></div>
+          <div class="c2"><input type="checkbox" class="check22"></div>
+          <div class="c3"><input type="checkbox" class="check22"></div>
+          <div class="c4"><input type="checkbox" class="check22"></div>
+          <div class="c5"><input type="checkbox" class="check22"></div>
+          <div class="c6"><input type="checkbox" class="check22"></div>
+          <div class="c7"><input type="checkbox" class="check22"></div>
+          <div class="c8"><input type="checkbox" class="check22"></div>
+          <div class="c9"><input type="checkbox" class="check22"></div>
+          <div class="c10"><input type="checkbox" class="check22"></div>
+          <div class="c11"><input type="checkbox" class="check22"></div>
+          <div class="c12"><input type="checkbox" class="check22"></div>
+        </div>
+        <div class="sub7">
+          <div class="c1"><input type="checkbox" class="check22"></div>
+          <div class="c2"><input type="checkbox" class="check22"></div>
+          <div class="c3"><input type="checkbox" class="check22"></div>
+          <div class="c4"><input type="checkbox" class="check22"></div>
+          <div class="c5"><input type="checkbox" class="check22"></div>
+          <div class="c6"><input type="checkbox" class="check22"></div>
+          <div class="c7"><input type="checkbox" class="check22"></div>
+          <div class="c8"><input type="checkbox" class="check22"></div>
+          <div class="c9"><input type="checkbox" class="check22"></div>
+          <div class="c10"><input type="checkbox" class="check22"></div>
+          <div class="c11"><input type="checkbox" class="check22"></div>
+          <div class="c21"><input type="checkbox" class="check22"></div>
+        
+        </div>
+        <div class="sub8">
+          <div class="sub11"><div class="c1"><input type="checkbox" class="check22"></div>
+          <div class="c3"><input type="checkbox" class="check22"></div>
+          <div class="c4"><input type="checkbox" class="check22"></div>
+          <div class="c5"><input type="checkbox" class="check22"></div>
+          <div class="c6"><input type="checkbox" class="check22"></div>
+          <div class="c7"><input type="checkbox" class="check22"></div></div>
+          
+          
+          
+
+
+          
+        </div>
+        <div class="sub9"></div>
+        <div class="sub10"></div>
+        
+      </div>
+      <div  class="class1">
+        cheque should be crossed A/C payee and drawn pagable to "HDFC BANK LTD.A/C.<Applicants Name>"
+      </div>
+      <div ><b class="class2">Amount(Rs)for SB account</b></div>
+      <div class="class3"><b>Amount(Rs)for FD/RD account</b></div>
+      <div class="class4"><b>Amount(Rs)for PPF account</b></div>
+      <div class="class5"><b>Amount(Rs)for SSA account</b></div>
+      <div class="sub61">
+          <div class="c1"><input type="checkbox" class="check22"></div>
+          <div class="c2"><input type="checkbox" class="check22"></div>
+          <div class="c3"><input type="checkbox" class="check22"></div>
+          <div class="c4"><input type="checkbox" class="check22"></div>
+          <div class="c5"><input type="checkbox" class="check22"></div>
+          <div class="c6"><input type="checkbox" class="check22"></div>
+          <div class="c7"><input type="checkbox" class="check22"></div>
+          <div class="c8"><input type="checkbox" class="check22"></div>
+          <div class="c9"><input type="checkbox" class="check22"></div>
+          <div class="c10"><input type="checkbox" class="check22"></div>
+          <div class="c11"><input type="checkbox" class="check22"></div>
+          <div class="c12"><input type="checkbox" class="check22"></div>
+        </div>
+        <div class="sub62" >
+          <div class="c1"><input type="checkbox" class="check22"></div>
+          <div class="c2"><input type="checkbox" class="check22"></div>
+          <div class="c3"><input type="checkbox" class="check22"></div>
+          <div class="c4"><input type="checkbox" class="check22"></div>
+          <div class="c5"><input type="checkbox" class="check22"></div>
+          <div class="c6"><input type="checkbox" class="check22"></div>
+          <div class="c7"><input type="checkbox" class="check22"></div>
+          <div class="c8"><input type="checkbox" class="check22"></div>
+          <div class="c9"><input type="checkbox" class="check22"></div>
+          <div class="c10"><input type="checkbox" class="check22"></div>
+          <div class="c11"><input type="checkbox" class="check22"></div>
+          <div class="c12"><input type="checkbox" class="check22"></div>
+        </div>
+        <div class="sub71">
+          <div class="c1"><input type="checkbox" class="check22"></div>
+          <div class="c2"><input type="checkbox" class="check22"></div>
+          <div class="c3"><input type="checkbox" class="check22"></div>
+          <div class="c4"><input type="checkbox" class="check22"></div>
+          <div class="c5"><input type="checkbox" class="check22"></div>
+          <div class="c6"><input type="checkbox" class="check22"></div>
+          <div class="c7"><input type="checkbox" class="check22"></div>
+          <div class="c8"><input type="checkbox" class="check22"></div>
+          <div class="c9"><input type="checkbox" class="check22"></div>
+          <div class="c10"><input type="checkbox" class="check22"></div>
+          <div class="c11"><input type="checkbox" class="check22"></div>
+          <div class="c21"><input type="checkbox" class="check22"></div>
+        
+        </div>
+        <div class="sub72">
+          <div class="c1"><input type="checkbox" class="check22"></div>
+          <div class="c2"><input type="checkbox" class="check22"></div>
+          <div class="c3"><input type="checkbox" class="check22"></div>
+          <div class="c4"><input type="checkbox" class="check22"></div>
+          <div class="c5"><input type="checkbox" class="check22"></div>
+          <div class="c6"><input type="checkbox" class="check22"></div>
+          <div class="c7"><input type="checkbox" class="check22"></div>
+          <div class="c8"><input type="checkbox" class="check22"></div>
+          <div class="c9"><input type="checkbox" class="check22"></div>
+          <div class="c10"><input type="checkbox" class="check22"></div>
+          <div class="c11"><input type="checkbox" class="check22"></div>
+          <div class="c21"><input type="checkbox" class="check22"></div>
+        
+        </div>
+        <hr class="here">
+        <div>
+          <div class="tab1">
+            <h2>(i)ATM CARD/DEBIT CARD</h2>
+            <input type="checkbox" height="30px"><font size="5px">Existing Card Linkage:</font>
+            <font>Customer can mention their Card No to which they want</br> to link this account</br></font>
+            <font color="red">(please note the faculty is a available for operating instructions:Single,Either or Survivor only)</font></br>
+            <div class="card">1st Card No:</div>
+            <div class="card1"><input type="checkbox" class="check12"></div>
+            <div class="card2"><input type="checkbox" class="check12"></div>
+            <div class="card3"><input type="checkbox" class="check12"></div>
+            <div class="card4"><input type="checkbox" class="check12"></div>
+            <div class="card5"><input type="checkbox" class="check12"></div>
+            <div class="card6"><input type="checkbox" class="check12"></div>
+            <div class="card7"><input type="checkbox" class="check12"></div>
+            <div class="card8"><input type="checkbox" class="check12"></div>
+            <div class="card9"><input type="checkbox" class="check12"></div>
+            <div class="card10"><input type="checkbox" class="check12"></div>
+            <div class="card11"><input type="checkbox" class="check12"></div>
+            <div class="card12"><input type="checkbox" class="check12"></div>
+            <div class="card13"><input type="checkbox" class="check12"></div>
+            
+            
+            <div class="card16"><input type="checkbox" class="check12"></div>
+            <div class="card17"><input type="checkbox" class="check12"></div></br></br>
+            
+            <div class="type">
+              <div class="card">2nd Card No:</div>
+              <div class="card1"><input type="checkbox" class="check12"></div>
+            <div class="card2"><input type="checkbox" class="check12"></div>
+            <div class="card3"><input type="checkbox" class="check12"></div>
+            <div class="card4"><input type="checkbox" class="check12"></div>
+            <div class="card5"><input type="checkbox" class="check12"></div>
+            <div class="card6"><input type="checkbox" class="check12"></div>
+            <div class="card7"><input type="checkbox" class="check12"></div>
+            <div class="card8"><input type="checkbox" class="check12"></div>
+            <div class="card9"><input type="checkbox" class="check12"></div>
+            <div class="card10"><input type="checkbox" class="check12"></div>
+            <div class="card11"><input type="checkbox" class="check12"></div>
+            <div class="card12"><input type="checkbox" class="check12"></div>
+            <div class="card13"><input type="checkbox" class="check12"></div>
+            <div class="card14"><input type="checkbox" class="check12"></div>
+            <div class="card15"><input type="checkbox" class="check12"></div>
+            </div>
+
+          </div>
+          <div class="tab2">
+            <div class="input1"><input type="checkbox" class="check22"></div>
+            <div class="input2">
+              <h2>New Card Request</h2>
+              <div class="new">Your Debit Card is activated for Domestic Usage(POS&ATM) please login into NetBanking or IVR for Activating International Domestic/Econ&contactless</div>
+            </div>
+
+            <div class="box">
+              
+                          
+              <div class="box1"><center class="cen">ATM Card</center></div>
+              <div class="box2"><center class="cen">Debit Card</br>(changes Applicable)</center></div>
+            </br><div>1st</div>
+            <div>2nd</div>  
+            <div class="box3"><input type="checkbox" class="marg"></br><input type="checkbox" class="marg1"></div>
+              <div class="box4">
+                <input type="checkbox" class="marg2"><div class="name">Regular</div>
+                <div class="box5"> <input type="checkbox" class="marg3"><div class="name1">Platinum</div></div>
+                  <div class="box6"><input type="checkbox" class="marg4"><div class="name2">Others</div></div></br>
+                  <div class="box7">
+                    <input type="checkbox" class="marg2"><div class="name">Regular</div>
+                    <div class="box5"> <input type="checkbox" class="marg3"><div class="name1">Platinum</div></div>
+                    <div class="box6"><input type="checkbox" class="marg4"><div class="name2">Others</div></div>
+                </div>
+              </div>
+            </div>
+            <div class="bottom1">
+            <div>If Other Mention Card </br> <font color="red">To be filled by bank staff only</font> </div>
+            <div>
+              <input type="checkbox">
+              <input type="checkbox">
+              <input type="checkbox">
+              <input type="checkbox">
+              <input type="checkbox">
+            </div>
+          </div>
+          <div class="bottom2">
+            <div>If Other Mention Card Code</br><font color="red"> To be filled by bank staff only</font></div>
+            <div>
+              <input type="checkbox">
+              <input type="checkbox">
+              <input type="checkbox">
+              <input type="checkbox">
+              <input type="checkbox">
+            </div>
+          </div>
+
+          </div>
+        </div>
+        <div class="back"><div class="back1">(J)INSTRUCTION FOR FIXED DEPOSIT/RECURRING DEPOSIT(please attach annexure & refer T&C in details for SureCover FD & Health Cover FD )</div></div>
+        <div>
+          <div class="back2">
+            <font color="black">
+              <div class="b1">I/We wish to open</div>
+              <div class="b2"><input type="checkbox" class="check23"></div>
+              <div class="b3">With drawable FD </div>
+              <div class="b4"><input type="checkbox" class="check23"></div>
+              <div class="b5"><font color="red">Non With drawble FD </font></div>
+            <div class="b6"><input type="checkbox" class="check23"></div>
+            <div class="b7">Tax saving FD</div>
+            <div class="b8"><input type="checkbox" class="check23"></div>
+            <div class="b9">SureCover FD</div>
+            <div class="b10"><input type="checkbox" class="check23"></div>
+            <div class="b11">HelathCover FD</div>
+          <div class="b12"><input type="checkbox" class="check23"></div>
+          <div class="b13">RD as ticked below</div></font>
+          </div>
+        </div>
+        <div>
+          <div class="back3">
+            <div class="bac1">
+            <div class="ba1"><h3>Holding pattern for FD/MD</h3></div>
+          </div>
+            <div class="bac2">
+              <div class="ba2"><h3>Operating Instruction</h3></div>
+            </div>
+
+            <div class="bac3">
+              <div class="ba3"><input type="checkbox" class="check"></div>
+              <div class="ba4"> 1st Applicant only</div>
+              <div class="ba5"><input type="checkbox" class="check"></div>
+              <div class="ba6"> 2nd Applicant only</div>
+              <div class="ba7"><input type="checkbox" class="check"></div>
+              <div class="ba8"> 1st&2nd Applicant only</div>
+              <div class="ba9"><input type="checkbox" class="check"></div>
+              <div class="ba10"> 2nd&1st Applicant only</div>
+            </div>
+            <div class="bac4">
+              <div class="ba11"><input type="checkbox" class="check"></div>
+              <div class="ba12">Single</div>
+              <div class="ba13"><input type="checkbox" class="check"></div>
+              <div class="ba14">Either or Survivor</div>
+              <div class="ba15"><input type="checkbox" class="check"></div>
+              <div class="ba16">Forms or Survivor</div>
+              <div class="ba17"><input type="checkbox" class="check"></div>
+              <div class="ba18">Minor and Guardian</div>
+              <div class="ba19"><input type="checkbox" class="check"></div>
+              <div class="ba20">Jointly</div>
+            </div>
+            <div class="ba21"><input type="checkbox" class="check"></div>
+            <div class="ba22">I/We wish to have the maturity/Intrest payout through NEFT (Refer T&C)
+              <div class="ba23"><h3>Beneficiary Account No</h3></div>
+              <div class="box8">
+                <div class="ba24"><input type="checkbox" class="check"></div>
+                <div class="r1"><input type="checkbox" class="check"></div>
+                <div class="r2"><input type="checkbox" class="check"></div>
+                <div class="r3"><input type="checkbox" class="check"></div>
+                <div class="r4"><input type="checkbox" class="check"></div>
+                <div class="r5"><input type="checkbox" class="check"></div>
+                <div class="r6"><input type="checkbox" class="check"></div>
+                <div class="r7"><input type="checkbox" class="check"></div>
+                <div class="r8"><input type="checkbox" class="check"></div>
+                <div class="r9"><input type="checkbox" class="check"></div>
+                <div class="r10"><input type="checkbox" class="check"></div>
+                <div class="r11"><input type="checkbox" class="check"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="div1">
+          <p>FD advice will be sent to the registered wmail.For Tax Savings Fo,and for customer Where email id is not registered, the advice will be dispatched at mailing address </br> within 7.8 working days of Fo banking I/we agree that in case of joint fixed deposit with survivorship  the bank shall be discharged by pagine the fixed deposit </br> proceeds permantatly to survivors on request in the event if death of one or more joint deposition I/we are that in withdrawable FD cannot be closed before expiry </br>  of the Further partial withdrawal or sweep in is not allowed in such deposit.Non with drawble deposit will be booked with option Do not RENEW. Non with drawble</br> deposit canot be pledged for any Security like overdraft facility issueme of Lc/BG or zny other etc</p>
+        </div>
+        <div>
+          <div class="ben"><h3>Benefeciary IFSC code</h3></div>
+          <div class="div2">
+            <div class="s1"><input type="checkbox" class="check"></div>
+            <div class="s2"><input type="checkbox" class="check"></div>
+            <div class="s3"><input type="checkbox" class="check"></div>
+            <div class="s4"><input type="checkbox" class="check"></div>
+            <div class="s5"><input type="checkbox" class="check"></div>
+            <div class="s6"><input type="checkbox" class="check"></div>
+            <div class="s7"><input type="checkbox" class="check"></div>
+            <div class="s8"><input type="checkbox" class="check"></div>
+            
+          </div>
+        </div>
+        <div class="div3"><center><b>Not Applicable For Recurring Deposit</b></center></div>
+        <div>
+          <div class="div4">
+          <div class="u1"><b>FD/RD Tenure</b></div>
+        </div>
+          <div class="div5">
+          <div class="u2"><b>Months</b></div>
+        </div>
+          <div class="div6">
+          <div class="u3"><b>Days</b></div>
+        </div>
+          <div class="div7">
+            <div class="u4"><input type="checkbox" class="check"></div>
+            <div class="u5"><input type="checkbox" class="check"></div>
+            <div class="u6"><input type="checkbox" class="check"></div>
+          </div>
+          <div class="div8">
+            
+            <div class="u7"><input type="checkbox" class="check"></div>
+            <div class="u8"><input type="checkbox" class="check"></div>
+            <div class="u9"><input type="checkbox" class="check"></div>
+          </div>
+        </div>
+        <div class="div9">
+          <div class="u10"><b>Rate of Interest%</b></div>
+        </div>
+        <div class="div10">
+          <div class="u11"><input type="checkbox" class="check"></div>
+            <div class="u12"><input type="checkbox" class="check"></div>
+            <div class="u13"><input type="checkbox" class="check"></div>
+
+
+        </div>
+        <div class="fact">
+          <div class="u14"><b>Interest Payment</b></div>
+        </div>
+        <div class="fact1">
+          <div class="u15"><b>Maturity Instruction</b></div>
+        </div>
+        <div class="fact2">
+          <div class="u16"><b>Tick anyone</b></div>
+        </div>
+        <div class="fact3">
+          <div class="u17"><b>Monthly</b></div>
+        </div>
+        <div class="fact4">
+          <div class="u18"><b>Quarterly</b></div>
+        </div>
+        <div class="fact5">
+          <div class="u19"><b>Maturity</b></div>
+        </div>
+        <div class="fact6">
+          <div><input type="checkbox" class="check"></div>
+        </div>
+        <div class="fact7">
+          <div><input type="checkbox" class="check"></div>
+        </div>
+        <div class="fact8">
+          <div><input type="checkbox" class="check"></div>
+        </div>
+        <div class="fact9">
+          <div><b>Renew Principal & Interest</b></div>
+        </div>
+        <div class="fact10">
+          <div><b>Renew Principal & Pay Interest</b></div>
+        </div>
+        <div class="fact11">
+          <div class="u20"><b>Do not Renew</b></div>
+        </div>
+        <div class="fact12">
+          <div><input type="checkbox" class="check"></div>
+        </div>
+        <div class="fact13">
+          <div><input type="checkbox" class="check"></div>
+        </div>
+        <div class="fact14">
+          <div><input type="checkbox" class="check"></div>
+        </div>
+        <div class="fact15">
+          <div class="u21"><b>Super Saver</b></div>
+        </div>
+        <div class="fact16">
+          <div class="u22"><b>Sweep in</b></div>
+        </div>
+        <div class="fact17">
+          <div><center><input type="checkbox" class="check"></center></div>
+        </div>
+        <div class="fact18">
+          <div><center><input type="checkbox" class="check"></center></div>
+        </div>
+        
+        <div class="fact19">Type of Account</div>
+        <div class="fact20"><input type="checkbox" class="check"></div>
+        <div class="fact21">Savings</div>
+        <div class="fact22"><input type="checkbox" class="check"></div>
+        <div class="fact23">Current</div>
+        <div class="fact24">Benefeciary Bank & Branch Name</div>
+        <div class="d1"><input type="checkbox" class="check"></div>
+        <div class="d2"><input type="checkbox" class="check"></div>
+        <div class="d3"><input type="checkbox" class="check"></div>
+        <div class="d4"><input type="checkbox" class="check"></div>
+        <div class="d5"><input type="checkbox" class="check"></div>
+        <div class="d6"><input type="checkbox" class="check"></div>
+        <div class="d7"><input type="checkbox" class="check"></div>
+        <div class="d8"><input type="checkbox" class="check"></div>
+        <div class="d9"><input type="checkbox" class="check"></div>
+        <div class="d10"><input type="checkbox" class="check"></div>
+        <div class="tap">
+        <div class="d1"><input type="checkbox" class="check"></div>
+        <div class="d2"><input type="checkbox" class="check"></div>
+        <div class="d3"><input type="checkbox" class="check"></div>
+        <div class="d4"><input type="checkbox" class="check"></div>
+        <div class="d5"><input type="checkbox" class="check"></div>
+        <div class="d6"><input type="checkbox" class="check"></div>
+        <div class="d7"><input type="checkbox" class="check"></div>
+        <div class="d8"><input type="checkbox" class="check"></div>
+        <div class="d9"><input type="checkbox" class="check"></div>
+        <div class="d10"><input type="checkbox" class="check"></div>
+        </div>
+        <div class="p1">Please Debit</div>
+        <div class="p2"><input type="checkbox" class="check"></div>
+        <div class="p3">New a/c/Existing a/c no.</div>
+        <div class="p4"><input type="checkbox" class="ck2"></div>
+        <div class="p5"><input type="checkbox" class="check"></div>
+        <div class="p6"><input type="checkbox" class="check"></div>
+        <div class="p7"><input type="checkbox" class="check"></div>
+        <div class="p8"><input type="checkbox" class="check"></div>
+        <div class="p9"><input type="checkbox" class="check"></div>
+        <div class="p10"><input type="checkbox" class="check"></div>
+        <div class="p11"><input type="checkbox" class="check"></div>
+        <div class="p12"><input type="checkbox" class="check"></div>
+        <div class="p13"><input type="checkbox" class="check"></div>
+        <div class="p14"><input type="checkbox" class="check"></div>
+        <div class="p15"><input type="checkbox" class="check"></div>
+        <div class="p16"><input type="checkbox" class="check"></div>
+        <div class="p17"><input type="checkbox" class="check"></div>
+        <div class="p18"><input type="checkbox" class="check"></div>
+        <div class="p19"><input type="checkbox" class="check"></div>
+        <div class="p20"><input type="checkbox" class="check"></div> 
+        <div class="p21">For RD</div>
+        <div class="p22"><p>Installments/FD booking and also credit the maturity/interest in the same account. I/We further understand that Super saver or Sweap.
+      In</p> <p>facility if requested will be activated in the same account</p></div>
+      <div class="text1"><input type="text" placeholder="1st Appl.Signature" class="text2"></div>
+      <div class="text3"><input type="text" placeholder="2nd Appl.Signature" class="text2"></div>
+      <div class="v1"><input type="checkbox" class="check"></div>
+      <div class="v2">I/We wish to have the maturity / intrested payout through manager's cheque at my mailing address for the above FD/RD </div>
+      <div class="v3"><input type="checkbox" class="check"></div>
+      <div class="v4">Convert to found Deposit for tenure of 1 year 1 day </div>
+      <div class="v5"><input type="checkbox" class="check"></div>
+      <div class="v6">Only Principal</div>
+      <div class="v7"><input type="checkbox" class="check"></div>
+      <div class="v8">Principal Interest</div>
+      <div class="v9">Deposit will be reinvestment of interest with maturityinstruction as Renew Principle & Interest</div>
+      <div class="w1">*TDS Details for FD/RD:Debust TDS(if applicable) </div>
+      <div class="w2"><input type="checkbox" class="check"></div>
+      <div class="w3">Yes </div>
+      <div class="w4"><input type="checkbox" class="check"></div>
+      <div class="w5">No if No ,attach </div>
+      <div class="w6"><input type="checkbox" class="check"></div>
+      <div class="w7">Form 15G/H</div>
+      <div class="w8"><input type="checkbox" class="check"></div>
+      <div class="w9">Income Tax< exemption letter</div>
+      <div class="w10"><input type="checkbox" class="check"></div>
+      <div class="w11">Waiver market on cast ID</div>
+      
+      <button type="submit">Submit</button>
+    </form>
+    <div id="formMessage" class="error"></div>
+</body>
+</html>

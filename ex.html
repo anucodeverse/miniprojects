@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Image Hover Text Popup</title>
+  <style>
+    .image-container {
+      position: relative;
+      display: inline-block;
+    }
+
+    .popup-text {
+      display: none;
+      position: absolute;
+      bottom: 50%; /* Show above the image */
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #333;
+      color: #fff;
+      padding: 6px 10px;
+      border-radius: 5px;
+      white-space: nowrap;
+      font-size: 14px;
+      z-index: 1;
+           }
+
+    .image-container:hover .popup-text {
+      display: block;
+    }
+    .bot{
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="image-container">
+    <div class="bot"><img src="https://via.placeholder.com/100" alt="Sample Image" width="100"></div>
+    <div class="popup-text">sphere!</div>
+  </div>
+
+</body>
+</html>

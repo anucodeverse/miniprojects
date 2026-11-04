@@ -1,0 +1,53 @@
+.box{
+	background-color: black;
+	color: white;
+	border: solid;
+	height: 70px;
+	font-family: bold;
+
+}
+.font{
+	margin-top: 20px;
+
+}
+.margin1{
+	margin-left: 20px;
+}
+.margin{
+	margin-left: 70px;
+}
+.button{
+	margin-left: 400px;	
+	height: 40px;
+}
+.select{
+	background-color: white;
+}
+.big{
+	border: solid;
+	height: 400px;
+}
+.bgcolor{
+	border: solid;
+	height: 250px;
+	border: solid;
+	width: 800px;
+	margin-left: 600px;
+	margin-top: 55px;
+	background-color: #20B2AA;
+}
+.video{
+	height: 230px;
+	width: 600px;
+	border: solid;
+	margin-left: -300px;
+	margin-top: -30px;
+}
+.text{
+	height: 250px;
+	width: 450px;
+	border: solid;
+	margin-left: 305px;
+	margin-top: -230px;
+	background-color: white;
+}
